@@ -5,20 +5,11 @@ import com.example.moneyapp.model.Recipe;
 import java.util.HashMap;
 import java.util.Map;
 
-public class RecipeService {
+public interface RecipeService {
 
-    private Map <Integer, Recipe> recipes = new HashMap<>();
+    public Recipe addRecipe (Recipe recipe);
 
-    private int id;
 
-    public Recipe addRecipe (Recipe recipe) {
-        recipes.put(id, recipe);
-        id++;
-        return recipe;
-    }
-
-    public Recipe getRecipeById (int recipeID) {
-        return recipes.get(recipeID);
-    }
+    public Recipe getRecipeById (int recipeID);
 
 }

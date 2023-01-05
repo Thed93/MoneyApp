@@ -5,18 +5,11 @@ import com.example.moneyapp.model.Ingredient;
 import java.util.HashMap;
 import java.util.Map;
 
-public class IngredientService {
+public interface IngredientService {
 
-    private Map<Integer, Ingredient> ingredients = new HashMap<>();
-    private int id = 1;
 
-    public Ingredient addIngredient(Ingredient ingredient) {
-        ingredients.put(id, ingredient);
-        id++;
-        return ingredient;
-    }
+    public Ingredient addIngredient(Ingredient ingredient);
 
-    public Ingredient getIngredientByID(int ingredientID) {
-        return ingredients.get(ingredientID);
-    }
+    public Ingredient getIngredientByID(int ingredientID);
+
 }
